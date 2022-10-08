@@ -13,6 +13,22 @@ shortScaleLst = [
   "quintillion",
   "sextillion",
   "septillion" ]
+
+shortScale :: Int -> String
+shortScale = h
+  where
+    h 0 = ""
+    h 1 = "thousand"
+    h 2 = "million"
+    h 3 = "billion"
+    h 4 = "trillion"
+    h 5 = "quadrillion"
+    h 6 = "quintillion"
+    h 7 = "sextillion"
+    h 8 = "septillion" 
+    h 9 = "octillion"
+    h _ = error "not supported"
+
 literals :: [String]
 literals = [
   "zero",
@@ -47,10 +63,6 @@ multiplesOfTen = [
   "eighty",
   "ninety"]
 
-
-shortScale :: Int -> String
-shortScale n | n < 9 = shortScaleLst !! n
-shortScale _ = []
 
 oneDigits :: Int -> String
 oneDigits n | n < 10 = literals !! n
