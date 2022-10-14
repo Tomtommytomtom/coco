@@ -23,6 +23,8 @@ packetInWords (0,b,c) | b * 10 + c < 20 = literals !! (b * 10 + c)
 packetInWords (0,b,c) = packetInWords (0,b,0) ++ "-" ++ packetInWords (0,0,c)
 packetInWords (a,b,c) = oneDigits a ++ " hundred and " ++ packetInWords (0,b,c)
 
+
+
 -- Packet + shortscale
 packetWithShortscale :: Int -> NumberPacket -> String
 packetWithShortscale _ (0,0,0) = []
