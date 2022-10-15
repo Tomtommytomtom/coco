@@ -1,0 +1,14 @@
+{
+  "emeraldwalk.runonsave": {
+        "commands": [
+            {
+                "match": "*.md",
+                "cmd": "make build-pdf file=${fileBasenameNoExtension}"
+            },
+            {
+                "match": ".*",
+                "cmd": "echo 'i run on all files'"
+            }
+        ]
+    },
+}
