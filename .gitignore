@@ -3,5 +3,9 @@
 *.jpeg
 *.png
 
+*.pdf
+
+*.zip
+
 # Ignore java class files
 *.class

@@ -3,14 +3,14 @@ Name: Tom Pillokat
 Matrikelnummer: 
 Semester: WiSe 2022/23
 Kurs: Product Dimensions
-title: Example
+title: Product Dimensions
 Lehrende:
   - Prof. Dr. Laura Popplow
   - Anne Karrenbock
 ---
 
 de:
-Beschreibungstext (500 Zeichen max.)
+Wir haben gelernt mithilfe von Pappe Pretotypen zu realisieren und Konzepte mit Kreativmethoden und Designprozessen zu erarbeiten
 
 en:
-deepl Translation
+We have learned to realize pretotypes with the help of cardboard and to develop concepts with creative methods and design processes
