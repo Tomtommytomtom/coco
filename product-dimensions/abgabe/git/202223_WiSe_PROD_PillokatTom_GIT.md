@@ -2,10 +2,9 @@
 title: Blockchain in der Kaffeeproduktions Supply Chain 
 students:
     - Tom Pillokat
-    - Tamara
+    - Tamara Hanka
     - Mario Mosler
-    - Eric
-    # todo nachnamen
+    - Erik Neuberger
 urls:
     - link:
         title: Google
