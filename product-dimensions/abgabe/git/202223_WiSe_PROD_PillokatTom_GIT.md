@@ -5,17 +5,7 @@ students:
     - Tamara Hanka
     - Mario Mosler
     - Erik Neuberger
-urls:
-    - link:
-        title: Google
-        url: "https://www.google.de"
-    - link:
-        title: CoCo
-        url: "https://coco.study"
-header-image: example-header.jpg
-gallery:
-    - example1.jpg
-    - example2.jpg
+header-image: Pretotype_Kontext.jpg
 public: true
 iteration: true
 ---
