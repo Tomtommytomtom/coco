@@ -1,0 +1,132 @@
+<!-- directives: [] -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- directives: [] -->
+<div id="content">
+  <h1>Computational Thinking Pruefungsabgabe Tom Pillokat (Matrikel Nr: 11159658)</h1>
+  <h2>Notes:</h2>
+  <ul>
+    <li>Realise friendship relationship is a graph problem -&gt; Abstraction</li>
+    <li>Thought of two Algorithms that i know traverse a graph DFS and BFS</li>
+    <li>Evaluate those two algorithms in the context of friendship graphs
+      <ul>
+        <li>DFS
+          <ul>
+            <li>near endless graph, 4 or 5 hops might already lead to people noone at the party knows</li>
+          </ul>
+        </li>
+        <li>BFS
+          <ul>
+            <li>many people of the party are probably direct friends with the host, or few hops away, so BFS seems to be the right choice</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>Implement BFS as an algorithm in text for humans using firefox browser features, things needed for that:
+      <ul>
+        <li>set of already visited nodes -&gt; People whos profiles ive visited and checked, wether they are my PoI (Person of interest)</li>
+        <li>a queue to save nodes im gonna visit
+          <ul>
+            <li>use tabs as a queue
+              <ul>
+                <li>midde mouse click on a link to open in a new tab</li>
+                <li>right click on newly opened tab -&gt; move tab -&gt; move to end</li>
+              </ul>
+            </li>
+            <li>use the color of links as the set of already visited nodes, link is dark blue or light blue -&gt; edge to an already visited node</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><h2>Solution:</h2> potential browser specific behavior in brackets
+      <ul>
+        <li>Start on the hosts page</li>
+        <li>Repeat these steps until you are on the page of Target:
+          <ul>
+            <li>for each unvisited(unvisited links are blue in, visited links either lightblue or dark blue) friend link on current page:
+              <ul>
+                <li>open in new tab (hover over the link with the mouse and click the mousewheel)</li>
+                <li>move newly opened tab to the end of the tab list (right click on the newly opened tab -&gt; move -&gt; move to end)</li>
+              </ul>
+            </li>
+            <li>close the current tab (firefox opens the right-adjacent tab of the one closed)</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  
+    <li><h2>Evaluate:</h2>
+      <ul>
+        <li>Algorithm runs in O(V + E), because edges are accessed in constant time from the respective vertices (Adjacency list-like),
+          <p>		  because when we are on a profile, we immediately see all the edges because of the links.
+            <br />
+</p>
+        </li>
+        <li><h3>Disadvantage of using a graph traversal algorithm:</h3>
+          <ul>
+            <li>it traverses the entire graph, this might be slower than a smarter algorithm that factors in certain information you still might remember about the person e.g.
+              <ul>
+                <li>how friends looked they talked to, that might enable better priorisation of visiting nodes -&gt; priority queue</li>
+                <li>prioritize after certain hobbies you might remember, age range, gender, city of residence or other potential factors,
+                  <p>				  this is difficult, and might not provide a lot of benefit. Have some pure function that takes in all these factors as parameters and
+                    <br />
+</p>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><h3>Advantages</h3>
+          <ul>
+            <li>it will definitely eventually find the person, since it goes through the entire graph</li>
+          </ul>
+        </li>
+        <li><h3>Disadvantages of the actual specific algorithm using browser tools:</h3>
+          <ul>
+            <li>Might run out of RAM having to open multiple hundreds of tabs, some people have alot of friends, not unrealistic
+              <ul>
+                <li>way to solve this: change the implementation of the queue to maybe some document where you save links or bookmarks in a folder,
+                  <p>				  this however means more clicks
+                    <br />
+</p>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><h3>Advantages of the actual specific algorithm using browser tools:</h3>
+          <ul>
+            <li>Uses the browser only</li>
+            <li>the link coloring feature is very convenient for the usecase</li>
+            <li>it would be even more convenient if some browser had the default behavior of opening links not right-adjacent to the current tab being active, but at the end
+              <p>			  of all of the open tabs, this would eliminate the step &quot;move newly opened tab to the end of the tab list&quot;
+                <br />
+</p>
+            </li>
+            <li>very little, simple steps</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><h2>Reflect:</h2>
+      <ul>
+        <li>Algorithm Design because i wrote a step-by-step guide to traverse the entire graph</li>
+        <li>Abstraction Abstracted the problem to traversing a Graph</li>
+        <li>Pattern Recognition Realize friendship relationship is a graph problem, and from that point on, use a known graph traversal</li>
+        <li>Data Representation Use tabs to model a queue and color of links to remember which nodes we have already visited</li>
+        <li>I tried the algorithm with my mother, and it worked surprisingly well, after a few clicks, she got the hang of it</li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+
+</body>
+</html>
